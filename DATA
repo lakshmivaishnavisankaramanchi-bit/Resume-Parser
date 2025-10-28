@@ -1,0 +1,37 @@
+# AI Training Dataset (JSON FORMAT)
+  Json
+  [
+  {
+    "text": "Vaishnavi Sankaramanchi\nEmail: vaishnavi@example.com\nPhone: +91 7989306460 \nB.Tech in AI-DS and Engineering from gurunanak insitute of technology.\nSkills: Python, Machine Learning, Pandas, SQL\nExperience: Data Science Intern at ShadowFox Technologies.",
+    "entities": {
+      "Name": "Vaishnavi Sankaramanchi",
+      "Email": "vaishnavi@example.com",
+      "Phone": "+91 7989306460",
+      "Education": "B.Tech in AI-DS and Engineering,Gurunanak insitute of technology",
+      "Skills": ["Python", "Machine Learning", "Pandas", "SQL"],
+      "Experience": "Data Science Intern at ShadowFox Technologies"
+    }
+  },
+  {
+    "text": "Rahul Verma, M.Tech in Artificial Intelligence, IIT Madras. Email: rahulverma@gmail.com, Phone: +91 9123456789. Worked as AI Research Intern at Pinnacle Labs using TensorFlow and NLP.",
+    "entities": {
+      "Name": "Rahul Verma",
+      "Email": "rahulverma@gmail.com",
+      "Phone": "+91 9123456789",
+      "Education": "M.Tech in Artificial Intelligence, IIT Madras",
+      "Skills": ["TensorFlow", "NLP"],
+      "Experience": "AI Research Intern at Pinnacle Labs"
+    }
+  }
+]
+
+  HOW AI USES THIS DATA:
+If your using a library like spaCy or hugging face transformers , you'll covert the data into a format the model can learn from eg:
+
+  from spaCy:
+
+TRAIN_DATA = [
+    ("Vaishnavi Sankaramanchi Email: vaishnavi@example.com", {"entities": [(0, 24, "NAME"), (33, 57, "EMAIL")]}),
+    ("Rahul Verma worked as AI Research Intern at Pinnacle Labs", {"entities": [(0, 11, "NAME"), (31, 51, "EXPERIENCE")]})
+]
+then your train a custom NER model to recognize names,emails,skills,etc..
