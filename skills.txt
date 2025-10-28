@@ -1,0 +1,10 @@
+python
+java
+sql
+excel
+machine learning
+deep learning
+tensorflow
+pandas
+communication
+leadership
