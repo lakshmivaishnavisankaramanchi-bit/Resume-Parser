@@ -1,0 +1,2 @@
+pip install spacy pandas PyPDF2 python-docx
+python -m spacy download en_core_web_sm
