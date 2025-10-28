@@ -1,0 +1,10 @@
+resume_parser/
+│
+├── resumes/                  # Folder to store sample resumes (PDF/DOCX)
+│   ├── resume1.pdf
+│   ├── resume2.docx
+│
+├── parser.py                 # Main Python script
+├── skills.txt                # List of skills to detect
+├── requirements.txt          # Libraries needed
+└── output.csv                # Final extracted data (output)
